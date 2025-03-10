@@ -3,23 +3,23 @@ import {
   StyleSheet,
   GestureResponderEvent,
   Text,
-  Pressable,
+  Pressable as RNPressable,
 } from "react-native";
-import { color, useWindowSize } from "@repo/data-utils";
+import { colorNames, useWindowSize } from "@repo/data-utils";
 
 export interface ButtonProps {
   text: string;
   onClick?: (event: GestureResponderEvent) => void;
 }
 
-export function Button({ text, onClick }: ButtonProps) {
+export function Pressable({ text, onClick }: ButtonProps) {
   const size = useWindowSize();
   return (
-    <Pressable style={styles.button} onPress={onClick}>
+    <RNPressable style={styles.button} onPress={onClick}>
       <Text style={styles.text}>
         {text} {String(size.height)}
       </Text>
-    </Pressable>
+    </RNPressable>
   );
 }
 
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     paddingLeft: 30,
     paddingRight: 30,
     fontSize: 15,
-    backgroundColor: color,
+    backgroundColor: colorNames.blueLagoon,
   },
   text: {
     color: "white",

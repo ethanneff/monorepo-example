@@ -1,10 +1,13 @@
 import dynamic from "next/dynamic";
 import React from "react";
 
-const NoSSR = ({ children }: { children: React.ReactNode }) => (
+const Component = ({ children }: { children: React.ReactNode }) => (
   <React.Fragment>{children}</React.Fragment>
 );
 
-export default dynamic(() => Promise.resolve(NoSSR), {
+/**
+ * needed because react native code does not support next's preloaded ssr
+ */
+export const NoSSR = dynamic(() => Promise.resolve(Component), {
   ssr: false,
 });
