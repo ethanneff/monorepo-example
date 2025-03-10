@@ -6,6 +6,5 @@ react native + next
 
 - tsconfig
 - linting
--
+- web/mobile test
 - tests
--
