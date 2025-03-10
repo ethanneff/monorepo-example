@@ -1,0 +1,24 @@
+{
+  "name": "@repo/ui-components",
+  "version": "0.0.0",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "scripts": {
+    "lint": "node ../../tooling/scripts/lint.js"
+  },
+  "devDependencies": {
+    "@jest/globals": "29.7.0",
+    "@repo/eslint": "workspace:*",
+    "@repo/jest": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@testing-library/react-native": "13.0.1",
+    "@types/react": "18.3.18",
+    "typescript": "5.8.2"
+  },
+  "dependencies": {
+    "@repo/data-utils": "workspace:*",
+    "react": "18.3.1",
+    "react-native": "0.76.7",
+    "react-native-safe-area-context": "4.12.0"
+  }
+}
