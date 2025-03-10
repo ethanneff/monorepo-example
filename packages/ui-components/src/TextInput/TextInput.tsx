@@ -1,13 +1,13 @@
-import { colorNames, getResponsive } from "@repo/data-utils";
-import React from "react";
-import { forwardRef, useCallback } from "react";
+import { colorNames, getResponsive } from '@repo/data-utils';
+import React from 'react';
+import { forwardRef, useCallback } from 'react';
 import {
   Platform,
   TextInput as RNTextInput,
   StyleSheet,
   type TextInputProps,
-} from "react-native";
-import { getTextFontProperties } from "../Text/getTextFontProperties";
+} from 'react-native';
+import { getTextFontProperties } from '../Text/getTextFontProperties';
 
 export type TextInputReference = null | RNTextInput;
 
@@ -16,19 +16,19 @@ type Properties = RequiredTextInputProperties & TextInputProps;
 type RequiredTextInputProperties = Required<
   Pick<
     TextInputProps,
-    | "autoCapitalize"
-    | "autoComplete"
-    | "autoCorrect"
-    | "defaultValue"
-    | "editable"
-    | "keyboardType"
-    | "onChangeText"
-    | "onSubmitEditing"
-    | "placeholder"
-    | "returnKeyType"
-    | "secureTextEntry"
-    | "submitBehavior"
-    | "textContentType"
+    | 'autoCapitalize'
+    | 'autoComplete'
+    | 'autoCorrect'
+    | 'defaultValue'
+    | 'editable'
+    | 'keyboardType'
+    | 'onChangeText'
+    | 'onSubmitEditing'
+    | 'placeholder'
+    | 'returnKeyType'
+    | 'secureTextEntry'
+    | 'submitBehavior'
+    | 'textContentType'
   >
 >;
 
@@ -53,8 +53,8 @@ export const TextInput = forwardRef<TextInputReference, Properties>(
     },
     reference,
   ) {
-    const isAndroid = Platform.OS === "android";
-    const fontProperties = getTextFontProperties("body3");
+    const isAndroid = Platform.OS === 'android';
+    const fontProperties = getTextFontProperties('body3');
 
     const styles = StyleSheet.create({
       input: {

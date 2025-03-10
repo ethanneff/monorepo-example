@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { Button, Text, TextInput, View } from "@repo/ui-components";
-import { NoSSR } from "../../NoSSR";
-import styles from "../styles/index.module.css";
+import { Button, Text, TextInput, View } from '@repo/ui-components';
+import { NoSSR } from '../../NoSSR';
+import styles from '../styles/index.module.css';
 
 const noop = () => false;
 
@@ -11,9 +11,18 @@ const Web = () => {
     <div className={styles.container}>
       <NoSSR>
         <View alignItems="center">
-          <Text title="Web" variant="header1" />
-          <Button onClick={noop} text="Boop" />
-          <Text title="Hello, world!" variant="body2" />
+          <Text
+            title="Web"
+            variant="header1"
+          />
+          <Button
+            onClick={noop}
+            text="Boop"
+          />
+          <Text
+            title="Hello, world!"
+            variant="body2"
+          />
           <TextInput
             autoCapitalize="none"
             autoComplete="off"

@@ -1,5 +1,5 @@
-import dynamic from "next/dynamic";
-import React from "react";
+import dynamic from 'next/dynamic';
+import React from 'react';
 
 const Component = ({ children }: { children: React.ReactNode }) => (
   <React.Fragment>{children}</React.Fragment>

@@ -1,5 +1,5 @@
-import { getResponsive } from "@repo/data-utils";
-import { Button, Text, TextInput, View } from "@repo/ui-components";
+import { getResponsive } from '@repo/data-utils';
+import { Button, Text, TextInput, View } from '@repo/ui-components';
 
 const noop = () => false;
 
@@ -8,13 +8,19 @@ export const Index = () => {
     <View
       gap={getResponsive(8)}
       style={{
-        alignItems: "center",
+        alignItems: 'center',
         flex: 1,
-        justifyContent: "center",
+        justifyContent: 'center',
       }}
     >
-      <Text title="Edit app/index.tsx to edit this screen" variant="body2" />
-      <Button onClick={noop} text="Boop" />
+      <Text
+        title="Edit app/index.tsx to edit this screen"
+        variant="body2"
+      />
+      <Button
+        onClick={noop}
+        text="Boop"
+      />
       <TextInput
         autoCapitalize="none"
         autoComplete="off"

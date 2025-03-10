@@ -1,8 +1,8 @@
-import { type ColorName, colorNames } from "@repo/data-utils";
-import React from "react";
-import { StyleSheet } from "react-native";
-import { Text, type TextProperties } from "../Text/Text";
-import { View } from "../View/View";
+import { type ColorName, colorNames } from '@repo/data-utils';
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { Text, type TextProperties } from '../Text/Text';
+import { View } from '../View/View';
 
 type Properties = TextProperties & {
   readonly outlineColor: ColorName;
@@ -27,21 +27,21 @@ export const TextWithOutline = ({
     },
     left: {
       ...passedStyled,
-      position: "absolute",
+      position: 'absolute',
       textShadowColor: colorNames[outlineColor],
       textShadowOffset: { height: outlineWidth, width: -outlineWidth },
       textShadowRadius: outlineRadius,
     },
     right: {
       ...passedStyled,
-      position: "absolute",
+      position: 'absolute',
       textShadowColor: colorNames[outlineColor],
       textShadowOffset: { height: -outlineWidth, width: -outlineWidth },
       textShadowRadius: outlineRadius,
     },
     top: {
       ...passedStyled,
-      position: "absolute",
+      position: 'absolute',
       textShadowColor: colorNames[outlineColor],
       textShadowOffset: { height: outlineWidth, width: outlineWidth },
       textShadowRadius: outlineRadius,

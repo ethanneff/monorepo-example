@@ -1,4 +1,4 @@
-import { Dimensions } from "react-native";
+import { Dimensions } from 'react-native';
 
 type Base4 =
   | 0
@@ -55,7 +55,7 @@ const guidelineBaseWidth = 750 / 2;
 const guidelineBaseHeight = 1334 / 2;
 
 const responsiveLargest = (size: Base4) => {
-  const { height, width } = Dimensions.get("window");
+  const { height, width } = Dimensions.get('window');
   if (width > height) {
     return Math.floor((width / guidelineBaseWidth) * size);
   }

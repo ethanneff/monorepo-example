@@ -1,14 +1,14 @@
-import { type ColorName, getDropShadow } from "@repo/data-utils";
-import React from "react";
-import { type ReactNode } from "react";
+import { type ColorName, getDropShadow } from '@repo/data-utils';
+import React from 'react';
+import { type ReactNode } from 'react';
 import {
   type LayoutChangeEvent,
   View as RNView,
   type StyleProp,
   StyleSheet,
   type ViewStyle,
-} from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 type ViewProperties = ViewStyle & {
   readonly absoluteFillObject?: boolean;
@@ -17,7 +17,7 @@ type ViewProperties = ViewStyle & {
   readonly dropShadowColor?: ColorName;
   readonly onLayout?: (event: LayoutChangeEvent) => void;
   readonly safeArea?: boolean;
-  readonly safeAreaEdges?: ["top", "right", "bottom", "left"];
+  readonly safeAreaEdges?: ['top', 'right', 'bottom', 'left'];
   readonly style?: StyleProp<ViewStyle>;
 };
 
@@ -25,7 +25,7 @@ export const View = ({
   absoluteFillObject,
   accessible,
   children,
-  dropShadowColor = "transparent",
+  dropShadowColor = 'transparent',
   onLayout,
   safeArea,
   safeAreaEdges,

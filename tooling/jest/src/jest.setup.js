@@ -1,49 +1,49 @@
-import mockRNNetInfo from "@react-native-community/netinfo/jest/netinfo-mock.js";
-import { NativeModules } from "react-native";
-import mockRNDeviceInfo from "react-native-device-info/jest/react-native-device-info-mock";
-import mockSafeAreaContext from "react-native-safe-area-context/jest/mock";
+import mockRNNetInfo from '@react-native-community/netinfo/jest/netinfo-mock.js';
+import { NativeModules } from 'react-native';
+import mockRNDeviceInfo from 'react-native-device-info/jest/react-native-device-info-mock';
+import mockSafeAreaContext from 'react-native-safe-area-context/jest/mock';
 
-jest.mock("react-native-safe-area-context", () => mockSafeAreaContext);
+jest.mock('react-native-safe-area-context', () => mockSafeAreaContext);
 
-jest.mock("react-native-config", () => ({
+jest.mock('react-native-config', () => ({
   APP: undefined,
   GOOGLE_SIGN_IN: undefined,
   DISABLE_ESLINT_PLUGIN: undefined,
   FACEBOOK_APP_ID: undefined,
 }));
-jest.mock("react-native-rate", () => ({
+jest.mock('react-native-rate', () => ({
   AndroidMarket: { Google: undefined },
 }));
-jest.mock("react-native-config", () => ({
-  Config: { AM_MOBILE_APP_ENVIRONMENT: "test" },
+jest.mock('react-native-config', () => ({
+  Config: { AM_MOBILE_APP_ENVIRONMENT: 'test' },
 }));
-jest.mock("react-native-webview", () => ({
+jest.mock('react-native-webview', () => ({
   WebView: () => <div>Mock WebView</div>,
 }));
-jest.mock("@react-native-cookies/cookies", () => ({
+jest.mock('@react-native-cookies/cookies', () => ({
   clearAll: jest.fn(),
 }));
-jest.mock("lottie-react-native", () => undefined);
-jest.mock("uuid", () => ({ v4: jest.fn(() => "uuid") }));
-jest.mock("react-native-localize", () => ({
-  getCountry: jest.fn(() => "US"),
-  getLocales: jest.fn(() => ["en-US"]),
-  getTimeZone: jest.fn(() => "America/New_York"),
+jest.mock('lottie-react-native', () => undefined);
+jest.mock('uuid', () => ({ v4: jest.fn(() => 'uuid') }));
+jest.mock('react-native-localize', () => ({
+  getCountry: jest.fn(() => 'US'),
+  getLocales: jest.fn(() => ['en-US']),
+  getTimeZone: jest.fn(() => 'America/New_York'),
   uses24HourClock: jest.fn(() => true),
-  getCalendar: jest.fn(() => "gregorian"),
-  getCurrencies: jest.fn(() => ["USD"]),
-  getLocales: jest.fn(() => ["en-US"]),
+  getCalendar: jest.fn(() => 'gregorian'),
+  getCurrencies: jest.fn(() => ['USD']),
+  getLocales: jest.fn(() => ['en-US']),
   getNumberFormatSettings: jest.fn(() => ({})),
-  getTemperatureUnit: jest.fn(() => "celsius"),
-  getTimeZone: jest.fn(() => "America/New_York"),
+  getTemperatureUnit: jest.fn(() => 'celsius'),
+  getTimeZone: jest.fn(() => 'America/New_York'),
   uses24HourClock: jest.fn(() => true),
   usesAutoDateAndTime: jest.fn(() => true),
   usesAutoTimeZone: jest.fn(() => true),
   usesMetricSystem: jest.fn(() => true),
 }));
-jest.mock("@react-native-community/netinfo", () => mockRNNetInfo);
-jest.mock("react-native-device-info", () => mockRNDeviceInfo);
-jest.mock("react-native-safe-area-context", () => {
+jest.mock('@react-native-community/netinfo', () => mockRNNetInfo);
+jest.mock('react-native-device-info', () => mockRNDeviceInfo);
+jest.mock('react-native-safe-area-context', () => {
   const inset = { top: 0, right: 0, bottom: 0, left: 0 };
   return {
     SafeAreaProvider: jest.fn().mockImplementation(({ children }) => children),
@@ -54,7 +54,7 @@ jest.mock("react-native-safe-area-context", () => {
     useSafeAreaInsets: jest.fn().mockImplementation(() => inset),
   };
 });
-jest.mock("@react-native-firebase/crashlytics", () => ({
+jest.mock('@react-native-firebase/crashlytics', () => ({
   log: jest.fn(),
   recordError: jest.fn(),
   setAttribute: jest.fn(),
@@ -70,7 +70,7 @@ jest.mock("@react-native-firebase/crashlytics", () => ({
   deleteUnsentReports: jest.fn(),
 }));
 
-jest.mock("@fullstory/react-native", () => ({
+jest.mock('@fullstory/react-native', () => ({
   identify: jest.fn(),
   setUserId: jest.fn(),
   setUserVars: jest.fn(),
@@ -115,10 +115,10 @@ jest.mock("@fullstory/react-native", () => ({
   onError: jest.fn(),
   setInForeground: jest.fn(),
   isInForeground: jest.fn(),
-  VERSION: "mocked-version",
+  VERSION: 'mocked-version',
 }));
-jest.mock("@react-navigation/core", () => ({
-  ...jest.requireActual("@react-navigation/core"),
+jest.mock('@react-navigation/core', () => ({
+  ...jest.requireActual('@react-navigation/core'),
   useFocusEffect: () => jest.fn(),
   useNavigation: () => ({
     getState: () => ({ routes: [] }),
@@ -141,4 +141,4 @@ NativeModules.RNCAsyncStorage = {
   setItem: jest.fn(),
 };
 
-jest.mock("react-native/Libraries/EventEmitter/NativeEventEmitter");
+jest.mock('react-native/Libraries/EventEmitter/NativeEventEmitter');

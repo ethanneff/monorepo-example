@@ -1,11 +1,11 @@
-import { colorNames } from "@repo/data-utils";
-import * as React from "react";
+import { colorNames } from '@repo/data-utils';
+import * as React from 'react';
 import {
   type GestureResponderEvent,
   Pressable as RNPressable,
   StyleSheet,
   Text,
-} from "react-native";
+} from 'react-native';
 
 export type ButtonProps = {
   readonly onClick?: (event: GestureResponderEvent) => void;
@@ -14,7 +14,10 @@ export type ButtonProps = {
 
 export const Pressable = ({ onClick, text }: ButtonProps) => {
   return (
-    <RNPressable onPress={onClick} style={styles.button}>
+    <RNPressable
+      onPress={onClick}
+      style={styles.button}
+    >
       <Text style={styles.text}>{text}</Text>
     </RNPressable>
   );
@@ -30,9 +33,9 @@ const styles = StyleSheet.create({
     paddingLeft: 30,
     paddingRight: 30,
     paddingTop: 14,
-    textAlign: "center",
+    textAlign: 'center',
   },
   text: {
-    color: "white",
+    color: 'white',
   },
 });

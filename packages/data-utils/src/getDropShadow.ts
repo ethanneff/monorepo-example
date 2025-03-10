@@ -1,7 +1,7 @@
-import { type ColorName, colorNames } from "./colorNames";
+import { type ColorName, colorNames } from './colorNames';
 
 export const getDropShadow = (backgroundColor: ColorName) => {
-  if (backgroundColor === "transparent") return {};
+  if (backgroundColor === 'transparent') return {};
   return {
     backgroundColor: colorNames[backgroundColor],
     elevation: 2,
