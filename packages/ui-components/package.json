@@ -4,10 +4,14 @@
   "main": "./src/index.ts",
   "module": "./src/index.ts",
   "scripts": {
-    "clean": "rm -rf dist"
+    "lint": "node ../../tooling/scripts/lint.js"
   },
   "devDependencies": {
+    "@jest/globals": "29.7.0",
+    "@repo/eslint": "workspace:*",
+    "@repo/jest": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@testing-library/react-native": "13.0.1",
     "@types/react": "18.3.18",
     "typescript": "5.8.2"
   },

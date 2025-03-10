@@ -1,39 +1,36 @@
+import { colorNames } from "@repo/data-utils";
 import * as React from "react";
 import {
-  StyleSheet,
-  GestureResponderEvent,
-  Text,
+  type GestureResponderEvent,
   Pressable as RNPressable,
+  StyleSheet,
+  Text,
 } from "react-native";
-import { colorNames, useWindowSize } from "@repo/data-utils";
 
-export interface ButtonProps {
-  text: string;
-  onClick?: (event: GestureResponderEvent) => void;
-}
+export type ButtonProps = {
+  readonly onClick?: (event: GestureResponderEvent) => void;
+  readonly text: string;
+};
 
-export function Pressable({ text, onClick }: ButtonProps) {
-  const size = useWindowSize();
+export const Pressable = ({ onClick, text }: ButtonProps) => {
   return (
-    <RNPressable style={styles.button} onPress={onClick}>
-      <Text style={styles.text}>
-        {text} {String(size.height)}
-      </Text>
+    <RNPressable onPress={onClick} style={styles.button}>
+      <Text style={styles.text}>{text}</Text>
     </RNPressable>
   );
-}
+};
 
 const styles = StyleSheet.create({
   button: {
-    maxWidth: 200,
-    textAlign: "center",
+    backgroundColor: colorNames.blueLagoon,
     borderRadius: 10,
-    paddingTop: 14,
+    fontSize: 15,
+    maxWidth: 200,
     paddingBottom: 14,
     paddingLeft: 30,
     paddingRight: 30,
-    fontSize: 15,
-    backgroundColor: colorNames.blueLagoon,
+    paddingTop: 14,
+    textAlign: "center",
   },
   text: {
     color: "white",

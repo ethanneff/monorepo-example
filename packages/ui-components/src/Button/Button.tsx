@@ -1,9 +1,10 @@
+import React from "react";
 import {
   type GestureResponderEvent,
   StyleSheet,
   Text,
   TouchableOpacity,
-} from 'react-native';
+} from "react-native";
 
 export type ButtonProperties = {
   readonly onClick?: (event: GestureResponderEvent) => void;
@@ -12,10 +13,7 @@ export type ButtonProperties = {
 
 export const Button = ({ onClick, text }: ButtonProperties) => {
   return (
-    <TouchableOpacity
-      onPress={onClick}
-      style={styles.button}
-    >
+    <TouchableOpacity onPress={onClick} style={styles.button}>
       <Text style={styles.text}>{text}</Text>
     </TouchableOpacity>
   );
@@ -23,7 +21,7 @@ export const Button = ({ onClick, text }: ButtonProperties) => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#2f80ed',
+    backgroundColor: "#2f80ed",
     borderRadius: 10,
     fontSize: 15,
     maxWidth: 200,
@@ -31,9 +29,9 @@ const styles = StyleSheet.create({
     paddingLeft: 30,
     paddingRight: 30,
     paddingTop: 14,
-    textAlign: 'center',
+    textAlign: "center",
   },
   text: {
-    color: 'white',
+    color: "white",
   },
 });

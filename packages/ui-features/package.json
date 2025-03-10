@@ -4,9 +4,11 @@
   "main": "./src/index.ts",
   "module": "./src/index.ts",
   "scripts": {
-    "clean": "rm -rf dist"
+    "lint": "node ../../tooling/scripts/lint.js"
   },
   "devDependencies": {
+    "@repo/eslint": "workspace:*",
+    "@repo/jest": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/react": "18.3.18",
     "typescript": "5.8.2"

@@ -3,17 +3,21 @@
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
-    "clean": "turbo run clean && rm -rf node_modules",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore"
+    "lint": "turbo run lint --parallel",
+    "test": "turbo run test --parallel",
+    "clean": "turbo run clean --parallel && find . -type d \\( -name '.cache' -o -name '.next' -o -name '.expo' -o -name '.turbo' -o -name 'dist' -o -name 'build' -o -name 'Pods' -o -name 'node_modules' \\) -exec rm -rf {} +",
+    "format": "prettier --write --cache --log-level=error . && knip && git ls-files -co --exclude-standard -- '*.sh' | xargs -r npx shellcheck && npx sherif --fix",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "prettier": "^3.5.3",
-    "turbo": "^2.4.4"
+    "husky": "9.1.7",
+    "knip": "5.43.6",
+    "only-allow": "1.2.1",
+    "prettier": "3.4.2",
+    "turbo": "2.4.0"
   },
-  "engines": {
-    "node": ">=18"
-  },
-  "name": "with-react-native-web",
+  "name": "@repo/monorepo",
   "packageManager": "pnpm@9.15.2",
   "pnpm": {
     "patchedDependencies": {
