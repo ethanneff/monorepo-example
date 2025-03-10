@@ -7,12 +7,17 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore"
   },
   "devDependencies": {
-    "prettier": "^3.1.1",
+    "prettier": "^3.5.3",
     "turbo": "^2.4.4"
   },
   "engines": {
     "node": ">=18"
   },
   "name": "with-react-native-web",
-  "packageManager": "pnpm@9.15.2"
+  "packageManager": "pnpm@9.15.2",
+  "pnpm": {
+    "patchedDependencies": {
+      "react-native-web": "patches/react-native-web.patch"
+    }
+  }
 }

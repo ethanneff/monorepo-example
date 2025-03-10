@@ -1,5 +1,11 @@
 module.exports = {
   reactStrictMode: true,
+  transpilePackages: [
+    "react-native",
+    "react-native-web",
+    "@repo/ui-components",
+    "@repo/data-utils",
+  ],
   webpack: (config) => {
     config.resolve.alias = {
       ...(config.resolve.alias || {}),

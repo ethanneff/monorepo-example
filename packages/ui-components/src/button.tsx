@@ -5,6 +5,7 @@ import {
   Text,
   Pressable,
 } from "react-native";
+import { color, useWindowSize } from "@repo/data-utils";
 
 export interface ButtonProps {
   text: string;
@@ -12,9 +13,12 @@ export interface ButtonProps {
 }
 
 export function Button({ text, onClick }: ButtonProps) {
+  const size = useWindowSize();
   return (
     <Pressable style={styles.button} onPress={onClick}>
-      <Text style={styles.text}>{text}</Text>
+      <Text style={styles.text}>
+        {text} {String(size.height)}
+      </Text>
     </Pressable>
   );
 }
@@ -29,7 +33,7 @@ const styles = StyleSheet.create({
     paddingLeft: 30,
     paddingRight: 30,
     fontSize: 15,
-    backgroundColor: "#2f80ed",
+    backgroundColor: color,
   },
   text: {
     color: "white",

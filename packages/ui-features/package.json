@@ -1,0 +1,20 @@
+{
+  "name": "@repo/ui-features",
+  "version": "0.0.0",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "scripts": {
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/react": "18.3.18",
+    "typescript": "5.8.2"
+  },
+  "dependencies": {
+    "@repo/data-utils": "workspace:*",
+    "@repo/ui-components": "workspace:*",
+    "react": "18.3.1",
+    "react-native": "0.76.7"
+  }
+}
