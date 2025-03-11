@@ -8,7 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
-    "lint": "node ../../tooling/scripts/lint.js"
+    "lint": "./../../scripts/lint.sh"
   },
   "jest": {
     "preset": "jest-expo"
@@ -45,6 +45,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
+    "@repo/eslint": "workspace:*",
     "@types/jest": "29.5.14",
     "@types/react": "18.3.18",
     "@types/react-test-renderer": "^18.3.0",

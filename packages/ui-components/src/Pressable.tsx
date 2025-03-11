@@ -1,5 +1,4 @@
 import { colorNames } from '@repo/data-utils';
-import * as React from 'react';
 import {
   type GestureResponderEvent,
   Pressable as RNPressable,
@@ -7,12 +6,12 @@ import {
   Text,
 } from 'react-native';
 
-export type ButtonProps = {
+type Properties = {
   readonly onClick?: (event: GestureResponderEvent) => void;
   readonly text: string;
 };
 
-export const Pressable = ({ onClick, text }: ButtonProps) => {
+export const Pressable = ({ onClick, text }: Properties) => {
   return (
     <RNPressable
       onPress={onClick}

@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
-import React from 'react';
+import React, { type PropsWithChildren } from 'react';
 
-const Component = ({ children }: { children: React.ReactNode }) => (
+const Component = ({ children }: PropsWithChildren) => (
   <React.Fragment>{children}</React.Fragment>
 );
 

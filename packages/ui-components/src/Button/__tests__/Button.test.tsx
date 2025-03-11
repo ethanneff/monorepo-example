@@ -1,6 +1,5 @@
 import { describe, expect, it, jest } from '@jest/globals';
 import { fireEvent, render, screen } from '@testing-library/react-native';
-import React from 'react';
 import { Button } from '../Button';
 
 describe('button', () => {

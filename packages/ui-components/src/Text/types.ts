@@ -7,6 +7,7 @@ export type FontFamily =
   | 'FuturaStd-Medium'
   | 'Lemon-Regular';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const textVariants = [
   'header1',
   'header2',

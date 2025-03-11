@@ -1,5 +1,4 @@
 import { colorNames, getResponsive } from '@repo/data-utils';
-import React from 'react';
 import { forwardRef, useCallback } from 'react';
 import {
   Platform,

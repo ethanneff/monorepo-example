@@ -1,5 +1,4 @@
 import { type ColorName, getDropShadow } from '@repo/data-utils';
-import React from 'react';
 import { type ReactNode } from 'react';
 import {
   type LayoutChangeEvent,

@@ -4,12 +4,12 @@
   "main": "./src/index.ts",
   "module": "./src/index.ts",
   "scripts": {
-    "lint": "node ../../tooling/scripts/lint.js"
+    "lint": "./../../scripts/lint.sh"
   },
   "devDependencies": {
     "@repo/eslint": "workspace:*",
     "@repo/jest": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/tsconfig": "workspace:*",
     "@types/react": "18.3.18",
     "typescript": "5.8.2"
   },

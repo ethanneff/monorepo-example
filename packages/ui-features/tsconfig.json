@@ -1,5 +1,4 @@
 {
-  "extends": "@repo/typescript-config/react-native-library",
-  "include": ["src"],
-  "exclude": ["node_modules"]
+  "extends": "@repo/tsconfig/package",
+  "include": ["src", "jest.config.js"]
 }

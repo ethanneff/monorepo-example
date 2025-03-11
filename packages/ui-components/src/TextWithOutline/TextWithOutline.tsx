@@ -1,5 +1,4 @@
 import { type ColorName, colorNames } from '@repo/data-utils';
-import React from 'react';
 import { StyleSheet } from 'react-native';
 import { Text, type TextProperties } from '../Text/Text';
 import { View } from '../View/View';

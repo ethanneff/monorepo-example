@@ -1,5 +1,4 @@
 import { type ColorName, colorNames, getResponsive } from '@repo/data-utils';
-import React from 'react';
 import {
   Text as RNText,
   type StyleProp,
